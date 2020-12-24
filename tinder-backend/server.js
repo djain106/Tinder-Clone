@@ -7,8 +7,8 @@ import dotenv from 'dotenv';
 // App Config
 dotenv.config();
 const app = express();
-const port = process.env.PORT;
-const password = process.env.PASSWORD;
+const port = process.env.PORT || 8001;
+const password = process.env.PASSWORD || "admin";
 const connection_url = `mongodb+srv://admin:${password}@cluster0.vs4xj.mongodb.net/tinderdb?retryWrites=true&w=majority`
 
 // Middlewares
